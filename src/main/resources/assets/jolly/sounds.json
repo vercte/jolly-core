@@ -1,0 +1,14 @@
+{
+  "surprise_creeper_explodes": {
+    "subtitle": "sound.jolly.surprise_creeper_explodes",
+    "sounds": ["jolly:party_horn"]
+  },
+  "all_i_want": {
+    "sounds": [
+      {
+        "name": "jolly:all_i_want",
+        "stream": true
+      }
+    ]
+  }
+}

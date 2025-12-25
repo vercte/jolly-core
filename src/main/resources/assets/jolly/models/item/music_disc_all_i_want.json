@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "jolly:item/music_disc_all_i_want"
+  }
+}
