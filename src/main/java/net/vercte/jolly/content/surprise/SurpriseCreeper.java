@@ -20,6 +20,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.animal.Cat;
 import net.minecraft.world.entity.animal.Ocelot;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.monster.Slime;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
@@ -141,6 +142,9 @@ public class SurpriseCreeper extends Monster {
 
         int index = level.random.nextInt(SPAWNABLE_ENTITIES.size());
         Entity entity = SPAWNABLE_ENTITIES.get(index).create(level, e -> {}, this.blockPosition(), MobSpawnType.MOB_SUMMONED, true, true);
+        if(entity instanceof Slime slime) {
+            slime.setSize(1, false);
+        }
 
         assert entity != null;
         level.addFreshEntity(entity);
